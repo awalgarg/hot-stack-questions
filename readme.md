@@ -4,7 +4,8 @@ The Stack Exchange network of sites receives a lot of activity everyday,
 and certain sites get rather interesting questions. These questions
 are classified as "Hot". This repository allows one to subscribe to a filtered
 feed of these hot questions. So you can receive these "hot" posts by email
-based on your interests.
+*based on your interests*. The official feed just dumps all the questions
+which might not be desired.
 
 ### Usage
 
