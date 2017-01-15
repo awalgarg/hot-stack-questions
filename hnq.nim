@@ -118,7 +118,7 @@ proc main() {.async.} =
             let resp = await client.getContent("http://stackexchange.com/feeds/questions")
             let doc = parseXml(newStringStream(resp))
             runQuery(doc, excludeQuery, includeQuery)
-            waitFor req.respond(Http200, $(doc))
+            waitFor req.respond(Http200, xmlHeader & $(doc), newHttpHeaders({"Content-Type": "application/atom+xml; charset=utf-8"}))
     waitFor server.serve(Port(port), cb)
 
 waitFor main()
